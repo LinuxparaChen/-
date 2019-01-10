@@ -70,15 +70,7 @@
     	filp->private_data = proc;
 
     	binder_unlock(__func__);
-
-    	if (binder_debugfs_dir_entry_proc) {
-    		char strbuf[11];
-
-    		snprintf(strbuf, sizeof(strbuf), "%u", proc->pid);
-    		proc->debugfs_entry = debugfs_create_file(strbuf, S_IRUGO,
-    			binder_debugfs_dir_entry_proc, proc, &binder_proc_fops);
-    	}
-
+    	......
     	return 0;
     }
     ```
