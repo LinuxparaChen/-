@@ -115,6 +115,7 @@
     		break;
     	//设置成为binder的上下文管理。
     	case BINDER_SET_CONTEXT_MGR:
+    		//保证binder只有一个上下文管理者，创建binder_node对象，初始化列表。
     		ret = binder_ioctl_set_ctx_mgr(filp);
     		if (ret)
     			goto err;
