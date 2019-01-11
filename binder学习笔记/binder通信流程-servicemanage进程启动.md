@@ -1,4 +1,5 @@
 # binder通信流程-servicemanager进程启动流程
+![](./pic/servicemanager进程启动流程.png)
 1. servicemanager服务
     ```C
     int main(int argc, char **argv)
